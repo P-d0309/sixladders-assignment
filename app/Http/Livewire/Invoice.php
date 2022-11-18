@@ -81,6 +81,8 @@ class Invoice extends Component
             } else {
                 $this->state['total_amount'] = 0;
             }
+        } else {
+            $this->state['rate'] = $this->state['net_amount'] = $this->state['unit'] = $this->state['total_amount'] = 0;
         }
 
         // Update the products which are already selected
