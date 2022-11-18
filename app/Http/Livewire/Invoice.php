@@ -199,7 +199,7 @@ class Invoice extends Component
 
         $lastInvoice = ModelsInvoice::latest('Invoice_Id')->first();
         if($lastInvoice) {
-            $InvoiceNo = $InvoiceNo + $lastInvoice->Invoice_no + 1;
+            $InvoiceNo = $lastInvoice->Invoice_no + 1;
         }
 
         $invoice = new ModelsInvoice;

@@ -10,7 +10,7 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">Invoice_No</th>
+                                <th scope="col">Invoice No</th>
                                 <th scope="col">Invoice_Date</th>
                                 <th scope="col">CustomerName</th>
                                 <th scope="col">TotalAmount</th>
@@ -29,8 +29,8 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td rowspan="4">
-                                        <h3>No Invoice are found. Please add from <a href="{{ route('home') }}">here</a>
+                                    <td colspan="4">
+                                        <h3 class="text-center">No Invoice are found. Please add it from <a href="{{ route('home') }}">here</a>
                                         </h3>
                                     </td>
                                 </tr>
