@@ -107,7 +107,7 @@
                             @forelse ($selectedProducts as $key => $selectedProduct)
                                     <tr>
                                     <th scope="row">
-                                        <select id="product" class="form-control" wire:model="selectedProducts.{{$key}}.product">
+                                        <select class="form-control" wire:model="selectedProducts.{{$key}}.product">
                                             @forelse ($products as $product)
                                                 <option value="{{ $product->Product_ID }}">{{ $product->Product_Name }}</option>
                                             @empty
@@ -120,13 +120,13 @@
                                     <th scope="row">{{ $selectedProduct['rate'] }}</th>
                                     <th scope="row">{{ $selectedProduct['unit'] }}</th>
                                     <th scope="row">
-                                        <input type="text" class="form-control" id="qty" wire:model="selectedProducts.{{$key}}.qty">
+                                        <input type="text" class="form-control" wire:model="selectedProducts.{{$key}}.qty">
                                         @error("selectedProducts.$key.qty")
                                             <p class="text-danger text-start">{{ $message }}</p>
                                         @enderror
                                     </th>
                                     <th scope="row">
-                                        <input type="text" class="form-control" id="qty" wire:model="selectedProducts.{{$key}}.discount">
+                                        <input type="text" class="form-control" wire:model="selectedProducts.{{$key}}.discount">
                                         @error("selectedProducts.$key.discount")
                                             <p class="text-danger text-start">{{ $message }}</p>
                                         @enderror
